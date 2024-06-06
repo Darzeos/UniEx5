@@ -47,9 +47,14 @@ def merge_sort(arr):
             sorted_index += 1
 
 #5. Extracted plot functions to create seperate plots via parameter to remove code doubling
+# Modified to show as bar plot
 def plot_list(arr, title):
-    x = range(len(arr))
-    plt.plot(x, arr)
+    ylabel='Value'
+    xlabel='Index'
+    plt.figure(figsize=(10, 6))
+    plt.bar(range(len(arr)), arr, color='blue')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
     plt.title(title)
     plt.show()
 
